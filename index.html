@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KALAJO RIDES- Transportation App</title>
+</head>
+<body>
+    <center>
+    <a id="top"></a>
+    <header>
+        
+        <div class="header-title">
+            <img src="Logo.png" alt="KALAJO RIDES LOGO" class="logo">
+            <h1>KALAJO RIDES</h1>
+        </div>
+        <p><em>Your reliable travel companion — safe, fast, affordable</em></p>
+        <nav>
+            <a href="#book">Book a Ride</a> |
+            <a href="#fleet">Our Vehicles</a> |
+            <a href="#media">Media</a> |
+            <a href="#map">map</a> |
+            <a href="#schedule">Schedule</a> |
+            <a href="#contact">Contact</a>
+        </nav>
+        <hr>
+    </header>
+    <main>
+
+        <section id="book">
+            <h2>Book a Ride</h2>
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>Trip Details</legend>
+                    
+                    <p>
+                        <label for="fullname">Full name:</label>
+                        <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+                    </p>
+                    <p>
+                        <label for="phone">Phone number:</label>
+                        <input type="tel" id="phone" name="phone" placeholder="e.g. +63 917 123 4567" required>
+                    </p>
+                    <p>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="your@email.com">
+                    </p>
+                    <p>
+                        <label for="pickup">Pick-up location:</label>
+                        <input type="text" id="pickup" name="pickup" list="places">
+                    </p>
+                    <p>
+                        <label for="dropoff">Drop-off location:</label>
+                        <input type="text" id="dropoff" name="dropoff" list="places">
+                    </p>
+
+
+                    <datalist id="places">
+                        <option value="Lakandula"></option>
+                        <option value="City Hall"></option>
+                        <option value="Session road"></option>
+                        <option value="University Campus"></option>
+                        <option value="Public Market"></option>
+                    </datalist>
+
+
+                    <p>
+                        <label for="date">Date:</label>
+                        <input type="date" id="date" name="date" required>
+                    </p>
+                    <p>
+                        <label for="time">Time:</label>
+                        <input type="time" id="time" name="time" required>
+                    </p>
+                    <p>
+                        <label for="passengers">Passengers:</label>
+                        <input type="number" id="passengers" name="passengers" min="1" max="10" value="1">
+                    </p>
+                    <p>
+                        <label for="vehicle">Vehicle type:</label>
+                        <select id="vehicle" name="vehicle">
+                            <option value="taxi">Taxi</option>
+                            <option value="van">Van</option>
+                            <option value="shuttle">Tamaraw</option>
+                            <option value="motor">Strada</option>
+                            <option value="tricycle">Jeepney</option>
+                        </select>
+                    </p>
+
+
+                    <p>
+                        Payment method:<br>
+                        <input type="radio" id="cash" name="payment" value="cash" checked>
+                        <label for="cash">Cash</label>
+                        <input type="radio" id="card" name="payment" value="card">
+                        <label for="card">Card</label>
+                        <input type="radio" id="ewallet" name="payment" value="ewallet">
+                        <label for="ewallet">E-Wallet</label>
+                    </p>
+
+
+                    <p>
+                        Extras:<br>
+                        <input type="checkbox" id="luggage" name="extras" value="luggage">
+                        <label for="luggage">Extra luggage</label>
+                        <input type="checkbox" id="childseat" name="extras" value="childseat">
+                        <label for="childseat">Child seat</label>
+                        <input type="checkbox" id="wheelchair" name="extras" value="wheelchair">
+                        <label for="wheelchair">Wheelchair accessible</label>
+                    </p>
+                    <p>
+                        <label for="notes">Notes for the driver:</label><br>
+                        <textarea id="notes" name="notes" rows="4" cols="50" placeholder="Special instructions or details..."></textarea>
+                    </p>
+                    <p>
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <label for="terms">I agree to the <a href="#terms-info">Terms & Conditions</a></label>
+                    </p>
+                    <p>
+                        <button type="submit">Book Now</button>
+                        <button type="reset">Clear</button>
+                    </p>
+                </fieldset>
+            </form>
+            <hr>
+        </section>
+        
+        <section id="fleet">
+            <h2>Our Vehicles</h2>
+            
+            <figure>
+                <img src="Tamaraw.jpg" alt="Ride with Tamaraw" width="400" height="250">
+                <figcaption><strong>Tamaraw</strong> - Fast and Strong can cary 7-10 passengers</figcaption>
+            </figure>
+            
+            <figure>
+                <img src="Strada.jpg" alt="Ride with Strada" width="400" height="250">
+                <figcaption><strong>Strada</strong> - Good for Carrying heavy loads</figcaption>
+            </figure>
+            
+            <figure>
+                <img src="Jeepney.jpg" alt="Jeepney Rides" width="400" height="250">
+                <figcaption><strong>Jeepney</strong> - Affordable fixed-route transport</figcaption>
+            </figure>
+            
+            <hr>
+        </section>
+
+    
+        <section id="map">
+            <h2>Find Our Stops</h2>
+            <p>Map of our main terminal — Baguio City, Philippines</p>
+            
+            <iframe 
+                title="GoRide Service Area Map"
+                width="600" height="400"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=120.95%2C14.53%2C121.00%2C14.57&layer=mapnik&marker=14.55%2C120.98">
+            </iframe>
+            <p><a href="https://www.openstreetmap.org/?mlat=14.55&mlon=120.98#map=14/14.55/120.98" target="_blank" rel="noopener">View larger map</a></p>
+            
+            <h3>Image Map: Route Overview</h3>
+            <p>Click a stop on the image to view schedule:</p>
+            <img src="Ride.jpg" 
+                 alt="Images" usemap="#routemap" width="600" height="200">
+            <map name="routemap">
+                <area shape="rect" coords="20,20,180,180" href="#schedule" alt="Via von Joy">
+                <area shape="rect" coords="220,20,380,180" href="#schedule" alt="City Hall">
+                <area shape="rect" coords="420,20,580,180" href="#schedule" alt="Mount Camisong">
+            </map>
+            <hr>
+        </section>
+        
+        <section id="media">
+            <h2>Media</h2>
+            
+            <h3>KALAJO RIDES (Video)</h3>
+            <video width="480" controls poster="https://placehold.co/480x270?text=Video+Preview">
+                <source src="Jeepney.mp4" type="video/mp4">
+                <source src="Jeepney.mp4" type="video/ogg">
+                Your browser does not support the video tag.
+            </video>
+
+            <h3>Watch on YouTube (Embedded)</h3>
+            <iframe width="560" height="315" 
+                    src="https://www.youtube.com/embed/jwBk0sTpbt0?si=bR7os_jpvwolGbx6" 
+                    title="KALAJO RIDES"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+            </iframe>
+            
+            <h3>Driver Announcement (Audio)</h3>
+            <audio controls>
+                <source src="Jeepney Love Story - Yeng Constantino (Lyrics)🎶.mp3" type="audio/mpeg">
+                <source src="Jeepney Love Story - Yeng Constantino (Lyrics)🎶.mp3" type="audio/ogg">
+                Your browser does not support the audio element.
+            
+            
+            <h3>Watch on YouTube (Embedded)</h3>
+            <iframe width="560" height="315" 
+                    src="Jeepney.mp4" 
+                    title="KALAJO RIDES Video"
+                    allowfullscreen></iframe>
+            <hr>
+        </section>
+    
+        <section id="schedule">
+            <h2>Shuttle Schedule</h2>
+            <table border="1" cellpadding="6" cellspacing="0">
+                <caption>Daily departures from Central Terminal</caption>
+                <thead>
+                    <tr>
+                        <th>Route</th>
+                        <th>Departure</th>
+                        <th>Arrival</th>
+                        <th>Fare</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Terminal → City Hall</td>
+                        <td>6:00 AM</td>
+                        <td>6:30 AM</td>
+                        <td>P30</td>
+                    </tr>
+                    <tr>
+                        <td>Terminal → Via Von Joy</td>
+                        <td>7:00 AM</td>
+                        <td>7:40 AM</td>
+                        <td>P45</td>
+                    </tr>
+                    <tr>
+                        <td>Terminal → Mount Camisong</td>
+                        <td>9:00 AM</td>
+                        <td>10:00 AM</td>
+                        <td>P120</td>
+                    </tr>
+                    <tr>
+                        <td>Terminal → Public Market</td>
+                        <td>1:00 PM</td>
+                        <td>1:25 PM</td>
+                        <td>P25</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h3>Check Your Route</h3>
+            <form method="get">
+                <p>
+                    <label for="route-select">Choose a route:</label>
+                    <select id="route-select" name="route">
+                        <option value="cityhall">Terminal → City Hall</option>
+                        <option value="university">Terminal → Via Von Joy</option>
+                        <option value="airport">Terminal → Mount Camisong</option>
+                        <option value="market">Terminal → Public Market</option>
+                    </select>
+                    <button type="submit">Search</button>
+                </p>
+            </form>
+            <hr>
+        </section>
+
+        
+        <section id="contact">
+            <h2>Contact & Feedback</h2>
+            
+            <form enctype="multipart/form-data" method="post">
+                <fieldset>
+                    <legend>Send Feedback</legend>
+                    <p>
+                        <label for="feedback-name">Your name:</label>
+                        <input type="text" id="feedback-name" name="feedback-name" required>
+                    </p>
+                    <p>
+                        <label for="rating">Rate your ride (1–5):</label>
+                        <input type="range" id="rating" name="rating" min="1" max="5" value="5">
+                    </p>
+                    <p>
+                        <label for="topic">Topic:</label>
+                        <select id="topic" name="topic">
+                            <option value="compliment">Compliment</option>
+                            <option value="complaint">Complaint</option>
+                            <option value="lostitem">Lost item</option>
+                            <option value="suggestion">Suggestion</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label for="message">Message:</label><br>
+                        <textarea id="message" name="message" rows="5" cols="50" required></textarea>
+                    </p>
+                    <p>
+                        <label for="photo">Attach a photo (optional):</label>
+                        <input type="file" id="photo" name="photo" accept="image/*">
+                    </p>
+                    <p>
+                        <button type="submit">Send Feedback</button>
+                    </p>
+                </fieldset>
+            </form>
+            
+            <h3>Reach Us</h3>
+            <address>
+                KALAJO RIDES<br>
+                LOACAN, Itogon Benguet.<br>
+                Phone: <a href="tel:+639171234567">096969696967</a><br>
+                Email: <a href="https://mail.google.com/mail/u/0/">support@kalajoRides.example</a>
+            </address>
+            <hr>
+        </section>
+       
+
+        <section id="links">
+            <h2>Useful Links</h2>
+            <ul>
+                <li><a href="https://openstreetmap.org/" target="_blank" rel="noopener">OpenStreetMap</a></li>
+                <li><a href="https://maps.google.com/" target="_blank" rel="noopener">GoogleMaps</a></li>
+                <li><a href="https://facebook.com" target="_blank" rel="noopener">Our Facebook Page</a></li>
+                <li><a href="#top">Back to top</a></li>
+            </ul>
+        </section>
+
+        
+        
+
+        <section id="terms-info">
+            <h2>Terms & Conditions</h2>
+            <details>
+                <summary>Read the terms</summary>
+                <ol>
+                    <li>Bookments must be made at least 2 hours before the scheduled departure time.</li>
+                    <li>Cancellations made less than 1 hour before departure are subject to a fee.</li>
+                    <li>All passengers must present valid ID upon request.</li>
+                </ol>
+            </details>
+        </section>
+    </main>
+    <footer>
+        <hr>
+        <p>&copy; Made by Aljay S. Minong All Rights Reserve.</p>
+    </footer>
+    </center>
+</body>
+</html>
